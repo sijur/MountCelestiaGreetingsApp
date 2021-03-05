@@ -10,8 +10,8 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 botDebug.logling()
 
-class MyClient(discord.Client):
+class GreetingsClient(discord.Client):
     pass
 
-client = MyClient()
+client = GreetingsClient()
 client.run(TOKEN)
