@@ -9,7 +9,13 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 class GreetingsClient(discord.Client):
-    pass
+    async def on_message(self, message):
+        if message.author == client.user:
+            return
+
+
+        if message.content.lower() == '!hello':
+            await message.channel.send("Hello there {0}!".format(message.author.name))
 
 client = GreetingsClient()
 client.run(TOKEN)
