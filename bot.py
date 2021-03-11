@@ -14,7 +14,7 @@ class GreetingsClient(discord.Client):
             return
 
 
-        if message.content.lower() == '!hello':
+        if message.content.lower() == 'hello':
             await message.channel.send("Hello there {0}!".format(message.author.name))
 
 client = GreetingsClient()
